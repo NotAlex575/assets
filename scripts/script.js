@@ -48,19 +48,15 @@ const renderCards = () =>{
 
 const generateCard = ({name, role, email, img}) => {
 
-  return ` <div class="col-12 col-md-4">
-            <div class="card rounded-0 border-0">
-                <div class="w-20">
-                    <div class="card-img-top">
-                        <img src="${img}" alt="" class="img-fluid">
-                    </div>
+  return `<div class="col-12 col-md-4">
+            <div class="card d-flex rounded-0 border-0 d-flex flex-row align-items-center bg-black">
+                <div class="card-img-left">
+                  <img src="${img}" alt="" class="img-fluid">
                 </div>
-                <div class="w-80">
-                    <div class="card-body text-center">
-                        <h4>${name}</h4>
-                        <p>${role}</p>
-                        <p>${email}</p>
-                    </div>
+                <div class="card-body text-starts">
+                  <h4 class="text-white">${name}</h4>
+                  <p class="text-white">${role}</p>
+                  <p class="text-info">${email}</p>
                 </div>
             </div>
         </div>`;
