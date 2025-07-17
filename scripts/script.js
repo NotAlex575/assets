@@ -46,16 +46,15 @@ const renderCards = () =>{
   }
 }
 
-const generateCard = (teamMembers) => {
-  const{name, role, email, img} = teamMembers;
+const generateCard = ({name, role, email, img}) => {
 
-  const memberCard = ` <div class="col-12 col-md-4">
+  return ` <div class="col-12 col-md-4">
             <div class="card rounded-0 border-0">
                 <div class="w-20">
                     <div class="card-img-top">
-                        <img src="./img/${img}" alt="" class="img-fluid">
+                        <img src="${img}" alt="" class="img-fluid">
                     </div>
-                </div>}
+                </div>
                 <div class="w-80">
                     <div class="card-body text-center">
                         <h4>${name}</h4>
@@ -64,9 +63,7 @@ const generateCard = (teamMembers) => {
                     </div>
                 </div>
             </div>
-        </div>`
-
-        return memberCard;
+        </div>`;
 }
 
 renderCards();
